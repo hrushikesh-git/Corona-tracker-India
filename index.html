@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/926d0772b8.js" crossorigin="anonymous"></script>
+    <title>covid-Tracker</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid head">
+        <div class="container">
+          <h1 class="display-4">Count Corona In India</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+      </div>
+    <h1 class="heading1">Corona Tracker India</h1>
+    
+    <div class="row my-row ">
+    <div class="col-3  my-col ">
+        <div class="card responsive test" id="card1" style="max-width: 18rem;">
+            <div class="card-body">
+                <i class="fas fa-viruses icon img=responsive"></i>
+                <h5 class="card-title" id="confirm" ></h5>
+                <h6 class="card-subtitle mb-2 text-muted">confirm</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3 my-col">
+        <div class="card test" id="card2" style="max-width: 18rem;">
+            <div class="card-body">
+                <i class="fas fa-viruses icon"></i>
+                <h5 class="card-title" id="active" ></h5>
+                <h6 class="card-subtitle mb-2 text-muted">active</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3 my-col">
+        <div class="card test" id="card3" style="max-width: 18rem;">
+            <div class="card-body">
+                <i class="fas fa-viruses icon"></i>
+                <h5 class="card-title" id="deaths" ></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Deaths</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 my-col">
+        <div class="card test" id="card4" style="max-width: 18rem;">
+            <div class="card-body">
+                <i class="fas fa-viruses icon"></i>
+                <h5 class="card-title" id="recover" ></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Recovered</h6>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <div class="States">
+        <h1 class="heading1">State Report Of Covid</h1>
+        <div class="state-select">
+        <select class="custom-select" name="state" id="state">
+            <option value="">State</option>
+            <option value="1">Mahrashtra</option>
+            <option value="2">Tamil Nadu</option>
+            <option value="3">Delhi</option>
+            <option value="4">Gujrat</option>
+            <option value="5">Utter Pradesh</option>
+            <option value="6">Rajasthan</option>
+            <option value="7">Madhya Pradesh</option>
+            <option value="8">West Bengal</option>
+            <option value="9">U</option>
+            <option value="10">Karnataka</option>
+            <option value="11">Haryana</option>
+            <option value="12">Bhihar</option>
+            <option value="13">Andra Pradesh</option>
+            <option value="14">J&K</option>
+            <option value="15">Telangana</option>
+            <option value="16">Odisha</option>
+            <option value="17">Assam</option>
+            <option value="18">Punjab</option>
+            <option value="19">Kerala</option>
+            <option value="20">UttaraKhand</option>
+            <option value="21">Jharkhand</option>
+            <option value="22">Chattisghar</option>
+            <option value="23">Tripura</option>
+            <option value="24">Himachal Pradesh</option>
+            <option value="25">GOA</option>
+            <option value="26">Mainpur</option>
+            <option value="27">Chandighar</option>
+            <option value="28">Paunducherry</option>
+            <option value="29">Ladakh</option>
+            <option value="30">Nagaland</option>
+            <option value="31">Mizoram</option>
+            <option value="32">Arunachal Pradesh</option>
+            <option value="33">Meghalaya</option>
+            <option value="34">Andaman Niconbar</option>
+            <option value="35">Diu Daman</option>
+            <option value="36">Sikkm</option>
+            <option value="37">Lakshadweep</option>
+        </select>
+    </div>
+        <button class="btn btn-outline-light mybtn" onclick="get()" >Show Status</button>
+        <div class="row my-row ">
+            <div class="col-3  my-col ">
+                <div class="card responsive test" id="card1" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <i class="fas fa-viruses icon img=responsive"></i>
+                        <h5 class="card-title" id="sconfirm" ></h5>
+                        <h6 class="card-subtitle mb-2 text-muted">confirm</h6>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-3 my-col">
+                <div class="card test" id="card2" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <i class="fas fa-viruses icon"></i>
+                        <h5 class="card-title" id="sactive" ></h5>
+                        <h6 class="card-subtitle mb-2 text-muted">active</h6>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-3 my-col">
+                <div class="card test" id="card3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <i class="fas fa-viruses icon"></i>
+                        <h5 class="card-title" id="sdeaths" ></h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Deaths</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 my-col">
+                <div class="card test" id="card4" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <i class="fas fa-viruses icon"></i>
+                        <h5 class="card-title" id="srecover" ></h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Recovered</h6>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+            <!-- Footer -->
+<footer class="page-footer">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <a target="_blank" class="btn-github" href="https://github.com/hrushikesh-git"> Hrushikesh Rasne</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+    <script>
+        var url = "https://api.covid19india.org/data.json";
+        var stateurl = "https://api.covid19india.org/state_district_wise.json"
+       async function get(){
+        var respone = await fetch(url);
+        var data = await  respone.json();
+       
+        //console.log(data.statewise);
+        document.getElementById("confirm").textContent = data.statewise[0].confirmed;
+        document.getElementById("active").textContent = data.statewise[0].active;
+        document.getElementById("deaths").textContent = data.statewise[0].deaths;
+        document.getElementById("recover").textContent = data.statewise[0].recovered;
+
+        var n = document.getElementById("state").selectedIndex;
+        console.log(document.getElementsByTagName("option")[n].value);
+        document.getElementById("sconfirm").textContent = data.statewise[n].confirmed;
+        document.getElementById("sactive").textContent = data.statewise[n].active;
+        document.getElementById("sdeaths").textContent = data.statewise[n].deaths;
+        document.getElementById("srecover").textContent = data.statewise[n].recovered;
+       }
+      /* async function getstate(){
+        var respone = await fetch(stateurl);
+        var statedata = await  respone.json();
+        console.log(statedata);
+       }*/
+       get();
+       //getstate();
+       
+       
+        
+    </script>
+</body>
+</html>

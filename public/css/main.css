@@ -1,0 +1,89 @@
+body{
+    background-color: #004d4d;
+}
+.head{
+    border-radius: 3rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+.death_case{
+    background: linear-gradient(to bottom,#fe8683 0%,#ff9d9b 100%);
+    color: #5a0401;
+    justify-content: center;
+}
+
+.test {
+    
+    border: 2px solid black;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.test i{
+    margin-left: 30%;
+    font-size: 400%;
+}
+
+.test h5{
+    text-align: center;
+    font-size: 2rem;
+}
+.test h6{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#card1{
+    background-color: #1ad1ff;
+}
+#card2{
+    background-color:  #ffff80;
+}
+#card3{
+    background-color: #fe8683;
+}
+#card4{
+    background-color:#00994d;
+}
+
+.States{
+    margin: 50px 0 ;
+}
+.my-col{
+    max-width: 100%;    
+}
+
+#state{
+    width:50%;
+    margin-left: 20%;
+}
+
+.mybtn{
+    width: 20%;
+    margin: 20px 300px;
+    font-weight: bold;
+}
+
+.heading1{
+    padding 10px;
+    text-align: center;
+   color:whitesmoke
+}
+.page-footer{
+    margin-top: 12px;
+    background-color:
+    #00e6e6 ;
+}
+
+@media only screen and (max-width:400mm){
+    body{
+        width: fit-content;
+    }
+    .my-col{
+        max-width: 50%;
+        flex: 0 0 100%;
+        margin: 5%;
+        margin-left: 30%;
+    }
+}
