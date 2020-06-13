@@ -1,6 +1,6 @@
 # Corona-tracker-India
 Easy Website for corona tracking using just front-end technologies
-The website is all device friendly and the simplest in it's way
+The website is all device friendly and the simplest in it's way.
 Just 4 Easy Steps to follow
 Step-1
   Created a basic skeleton in html and make a raw site
