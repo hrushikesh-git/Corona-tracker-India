@@ -1,10 +1,29 @@
 body{
-    background-color: #004d4d;
+    --accent-color:orangered;
+    --background-color:wheat;
+    --text-color:black;
+    --button-text-color:var(--background-color);
+    --transition-delay:1s;
+
+    background-color: wheat;
+    color: var(--text-color);
 }
+
+body.dark{
+    
+    --accent-color:#D0D066;
+    --background-color:black;
+    --text-color:white;
+
+    background-color: var(--background-color);
+}
+
 .head{
     border-radius: 3rem;
     position: relative;
     margin: 0 auto;
+    background: none;
+    border-radius: 2px solid black;
 }
 
 .death_case{
@@ -38,7 +57,7 @@ body{
     background-color: #1ad1ff;
 }
 #card2{
-    background-color:  #ffff80;
+    background-color:  #929240;
 }
 #card3{
     background-color: #fe8683;
@@ -63,17 +82,51 @@ body{
     width: 20%;
     margin: 20px 300px;
     font-weight: bold;
+   
 }
 
 .heading1{
     padding 10px;
     text-align: center;
-   color:whitesmoke
 }
 .page-footer{
     margin-top: 12px;
     background-color:
-    #00e6e6 ;
+    #325f5f ;
+}
+
+
+
+
+.title {
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+
+.theme-toggle-button{
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+    transition: var(--transition-delay);
+    transform: scale(1);
+    
+}
+
+.theme-toggle-button icon{
+    margin-right: .5em;
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+    transform:scaleX(1.1);
 }
 
 @media only screen and (max-width:400mm){
